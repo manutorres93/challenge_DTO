@@ -21,17 +21,17 @@ export class TransferController {
   }
 
   @Get(':id')
-  async findOne(@Param('id') id: string){
+  async findOne(@Param('id') id: string) {
     return await this.transferService.findOne(id);
   }
 
   @Post()
-  create(@Body() transfer: TransferDto){
+  create(@Body() transfer: TransferDto) {
     return this.transferService.create(transfer);
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() transfer: TransferDto){
+  update(@Param('id') id: string, @Body() transfer: TransferDto) {
     return this.transferService.update(id, transfer);
   }
 

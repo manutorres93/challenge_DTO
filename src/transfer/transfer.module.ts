@@ -6,7 +6,9 @@ import { Transfer, TransferSchema } from './entities/transfer.entity';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: Transfer.name, schema: TransferSchema }]),
+    MongooseModule.forFeature([
+      { name: Transfer.name, schema: TransferSchema },
+    ]),
   ],
   controllers: [TransferController],
   providers: [TransferService],

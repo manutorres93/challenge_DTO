@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 @Schema({ timestamps: true })
 export class Transfer extends Document {
-  @Prop({ required: true })
+  @Prop({ required: false })
   transferId: string;
 
   @Prop({ required: true })
@@ -22,10 +22,3 @@ export class Transfer extends Document {
 }
 
 export const TransferSchema = SchemaFactory.createForClass(Transfer);
-
-/* BookSchema.index(
-  { bookId: 1 },
-  {
-    name: 'index to improve bookId search query',
-  },
-); */

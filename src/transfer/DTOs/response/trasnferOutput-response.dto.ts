@@ -1,4 +1,4 @@
-import { IsDate, IsNotEmpty , IsString} from 'class-validator';
+import { IsDate, IsNotEmpty, IsString } from 'class-validator';
 import { Type } from 'class-transformer';
 import { TransferDto } from '../common/transfer.dto';
 
