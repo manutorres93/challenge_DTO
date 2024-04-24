@@ -9,8 +9,10 @@ import {
 } from '@nestjs/common';
 import { TransferService } from '../services/transfer.service';
 import { TransferDto } from '../DTOs/common/transfer.dto';
-//import { TransferResponseDto } from '../DTOs/response/trasnferOutput-response.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+
+@ApiTags('transfer')
 @Controller('transfers')
 export class TransferController {
   constructor(private readonly transferService: TransferService) {}

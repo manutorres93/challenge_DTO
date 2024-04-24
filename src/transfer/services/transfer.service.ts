@@ -34,6 +34,6 @@ export class TransferService {
   }
 
   remove(id: string): Promise<Transfer> {
-    return this.transfers.findOneAndDelete({ bookId: id }).exec();
+    return this.transfers.findOneAndDelete({ transferId: id }).exec();
   }
 }
