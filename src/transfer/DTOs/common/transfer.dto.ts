@@ -18,6 +18,6 @@ export class TransferDto {
   amount: number;
 
   @IsNotEmpty()
-  @IsString() // Cambiado de @IsDate() a @IsString()
-  transactionDate: string; // Cambiado de Date a string
+  @IsString()
+  transactionDate: string;
 }

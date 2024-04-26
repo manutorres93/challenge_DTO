@@ -11,7 +11,6 @@ import { TransferService } from '../services/transfer.service';
 import { TransferDto } from '../DTOs/common/transfer.dto';
 import { ApiTags } from '@nestjs/swagger';
 
-
 @ApiTags('transfer')
 @Controller('transfers')
 export class TransferController {
@@ -28,17 +27,17 @@ export class TransferController {
   }
 
   @Post()
-  create(@Body() transfer: TransferDto) {
-    return this.transferService.create(transfer);
+  async create(@Body() transfer: TransferDto) {
+    return await this.transferService.create(transfer);
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() transfer: TransferDto) {
-    return this.transferService.update(id, transfer);
+  async update(@Param('id') id: string, @Body() transfer: TransferDto) {
+    return await this.transferService.update(id, transfer);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.transferService.remove(id);
+  async remove(@Param('id') id: string) {
+    return await this.transferService.remove(id);
   }
 }
